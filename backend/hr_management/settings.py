@@ -11,12 +11,15 @@ DEBUG = os.getenv('DEBUG', 'True').lower() in ('1', 'true', 'yes')
 ALLOWED_HOSTS = ['*']
 
 INSTALLED_APPS = [
-    'django.contrib.staticfiles',
-    'api',
-    'corsheaders',
     'django.contrib.admin',
-    
+    'django.contrib.auth',
+    'django.contrib.contenttypes',
+    'django.contrib.sessions',
+    'django.contrib.messages',
+    'django.contrib.staticfiles',
 
+    'corsheaders',
+    'api',
 ]
 
 MIDDLEWARE = [
