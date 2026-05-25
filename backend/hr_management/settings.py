@@ -80,7 +80,7 @@ EMAIL_HOST_USER = os.getenv('EMAIL_USER')
 EMAIL_HOST_PASSWORD = os.getenv('EMAIL_PASS')
 
 DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
-EMAIL_TIMEOUT = 60
+EMAIL_TIMEOUT = 30
 
 CORS_ALLOW_ALL_ORIGINS = True
 
@@ -89,3 +89,4 @@ CORS_ALLOW_CREDENTIALS = True
 CSRF_TRUSTED_ORIGINS = [
     "https://novahamohrmanagementsystem.netlify.app",
 ]
+
