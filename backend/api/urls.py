@@ -1,6 +1,6 @@
 from django.urls import path
 from . import views
-
+from .views import test_email_config
 urlpatterns = [
     path('auth/register', views.register_view),
     path('auth/login', views.login_view),
@@ -52,4 +52,5 @@ urlpatterns = [
     path('payslips/my', views.get_my_payslips_view),
     path('payslips/download/<str:salary_id>', views.download_payslip_view),
     path('payslips/download-year/<int:year>', views.download_yearly_payslips_view),
+    path('test-email-config/', test_email_config),
 ]

@@ -153,6 +153,7 @@ def get_employee_name(employee, user):
     return get_user_name(user)
 
 
+
 def create_base_response(doc):
     if not doc:
         return None
@@ -1251,3 +1252,11 @@ def download_yearly_payslips_view(request, year):
     response = HttpResponse(buffer.getvalue(), content_type='application/zip')
     response['Content-Disposition'] = f'attachment; filename=Payslips-{year}.zip'
     return response
+from django.http import JsonResponse
+import os
+
+def test_email_config(request):
+    return JsonResponse({
+        "email_user_exists": bool(os.getenv("EMAIL_USER")),
+        "email_pass_exists": bool(os.getenv("EMAIL_PASS"))
+    })
